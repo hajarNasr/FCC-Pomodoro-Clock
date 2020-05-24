@@ -1,0 +1,263 @@
+*{padding: 0px; margin: 0px;
+    border: none;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing:    border-box;
+            box-sizing:    border-box;}
+body{
+    height:100vh;
+    background-color:rgba(0, 0, 0, 0.486);
+}
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 55%;
+    margin: auto;
+    min-width: 300px;
+    min-height: 250px;
+}
+.p-clock{
+    width: 80%;
+    padding: 30px;
+    background-color: rgb(236, 231, 231);
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(153, 150, 150);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.session-break{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(124, 99, 99);
+    font-size: larger;
+}
+.under-length-label{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.under-length-label>*{
+    text-align: center;
+}
+.inc, .dec{
+    color: rgb(196, 158, 158);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    outline: none;
+}
+.inc:hover, .dec:hover{
+    cursor: pointer;
+}
+.inc-dec{
+    background-color: wheat;
+    font-size: 1.3rem;
+    background-color: rgb(151, 122, 122);
+    color: whitesmoke;
+    border-radius: 2px;
+    border: solid 1px rgba(214, 203, 203, 0.719);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.clock{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.digi-clock{
+   width:150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 10px double rgb(233, 231, 231);
+   background-color: rgb(196, 158, 158);
+   box-shadow: 
+       0 0 20px rgb(196, 158, 158),
+       0 1px 0 rgb(196, 158, 158),
+       0 2px 3px rgb(173, 92, 92);
+
+   color: whitesmoke;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+}
+.digi-clock>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+}
+.lenght-name{
+   margin-top: -17px;
+   font-size: 1.2rem;
+}
+.time{
+    background-color: rgb(230, 223, 223);
+    color: rgb(168, 128, 128);
+    border-radius: 3px;
+    font-size: 2rem;
+    padding:18px;
+    margin-top: 2px;
+    box-shadow: inset 0.75px 0.75px 0.75px 1px rgb(168, 128, 128);
+}
+.reset-start-btns{
+    margin-top: 30px;
+    width: 58%;
+}
+.reset, .start-stop{
+    width: 90%;
+    font-size: large;
+    padding: 3px;
+    border-radius: 30px;
+    margin: 5px;
+    outline: none;
+    background-color: rgb(196, 158, 158);
+    color: whitesmoke;
+    box-shadow:  4px 4px 4px rgb(196, 158, 158);
+
+ 
+    
+}
+.reset:active, .start-stop:active{
+    transform: translate(1.2px, 1.2px);
+}
+.inc:active{
+    transform: translateY(-1.8px);
+}
+.dec:active{
+    transform: translateY(1.8px);
+}
+.reset:hover, .start-stop:hover{
+    background-color: rgb(241, 237, 237);
+    color: rgb(168, 139, 139);
+    box-shadow: 4px 4px 4px rgb(180, 177, 177);
+}
+#beep{
+    display:none;
+}
+@media(max-width:400px){
+    .session-break{
+        font-size: medium;
+    }
+    .inc-dec{
+        font-size: 1.1rem;
+        width: 32px;
+        height: 32px;
+    }
+    .time{
+        font-size: 1.7rem;
+    }
+    .reset-start-btns{
+        width:90%;
+    }
+    #root{
+        width: 100%;
+    }
+    .p-clock{
+        width:90%;
+        height: 65%;
+    }
+}
+
+@media (max-width:349px){
+    .p-clock{
+        width:95%;
+        height: 77%;
+    }
+    .session-break{
+        font-size: 0.93rem;
+    }
+}
+@media (min-width:401px) and (max-width:600px){
+    #root{
+        width:100%;
+    }
+    .p-clock{
+        width:88%;
+        height: 65%;
+    }
+    .reset-start-btns{
+        width: 75%;
+    }
+}
+@media (min-width:601px) and (max-width:800px){
+    #root{
+        width: 100%;
+    }
+    .p-clock{
+        width:75%;
+        height: 65%;
+    }
+    .reset-start-btns{
+        width: 68%;
+    }
+}
+@media (min-width:801px) and (max-width:1024px){
+    #root{
+        width: 60%;
+    }
+    .p-clock{
+        width: 90%;
+    }
+    .reset-start-btns{
+        width: 70%;
+    }
+}
+@media (orientation:landscape) and (max-width:750px){
+
+    .p-clock{
+       height: 85%;
+       padding: 15px;
+    }
+    .session-break{
+        font-size: medium;
+    }
+    .inc, .dec{
+        font-size: 1.3rem;
+    }
+    .inc-dec{
+        height: 30px;
+        width: 30px;
+        font-size: 1rem;
+    }
+    .digi-clock{
+        width:130px;
+        height: 130px;
+        padding: 10px;
+    }
+    .lenght-name{
+        font-size: 0.9rem;
+     }
+     .time{
+         font-size: 1.5rem;
+         padding:15px; 
+     }
+     .digi-clock>*{
+        width: 95px;
+     }
+     .reset-start-btns{
+         width:52%;
+         margin-top: 15px;
+     }
+     .reset, .start-stop{
+        font-size: medium;
+        margin: 3px;
+     }
+     .clock{
+         margin-top: -220px;
+     }
+}
+
