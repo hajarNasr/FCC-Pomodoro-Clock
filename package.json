@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "axios": "^0.19.2",
-    "marked": "^1.0.0",
+    "marked": "^4.0.10",
     "react-mark": "^0.0.4"
   }
 }
